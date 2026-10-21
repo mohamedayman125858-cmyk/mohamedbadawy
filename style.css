@@ -1,0 +1,49 @@
+/* ضبط الخط الأساسي وخلفية الصفحة العامة */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #0f172a; /* لون خلفية داكن (Slate 900) */
+    color: #f8fafc;
+    margin: 0;
+    padding: 0;
+}
+
+/* تنسيق البطاقة الرئيسية مع تأثير الزجاج الضبابي (Glassmorphism) */
+.custom-card {
+    background-color: rgba(30, 41, 59, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* تخصيص تأثيرات أزرار السوشيال ميديا عند المرور بالماوس عليها */
+.social-link {
+    transition: all 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    transform: translateY(-2px); /* ارتفاع الزر قليلاً للأعلى */
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3); /* توهج هادئ للزر */
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+/* جعل الأيقونات واضحة ومحددة بدون إضاءة مبالغ فيها */
+.social-link i.fa-brands {
+    font-size: 1.25rem; /* حجم متناسق وواضح */
+    opacity: 0.95; /* وضوح تام وثابت */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* تكبير بسيط ونعومة عند المرور بالماوس */
+.social-link:hover i.fa-brands {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* تخصيص صورة البروفايل وحوافها المتحركة أو الظل */
+#profile-img {
+    transition: transform 0.3s ease;
+}
+
+#profile-img:hover {
+    transform: scale(1.03); /* تكبير بسيط للصورة عند المرور عليها */
+}
